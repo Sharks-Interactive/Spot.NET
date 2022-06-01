@@ -1,12 +1,12 @@
 ﻿
 <p align='center'>
-  <img src="https://i.imgur.com/UpSnz2p.png" />
+  <img src="https://imgur.com/FiqCe1Z" />
 </p>
 
-![npm version](https://img.shields.io/nuget/v/@sharks-interactive/spot.net)  ![npm downloads](https://img.shields.io/nuget/dm/@sharks-interactive/spot.net)  ![npm downloads](https://img.shields.io/github/license/@sharks-interactive/spot.net)
+![npm version](https://img.shields.io/nuget/v/@sharks-interactive/spot.net)  ![npm downloads](https://img.shields.io/nuget/dt/@sharks-interactive/spot.net)  ![npm downloads](https://img.shields.io/github/license/@sharks-interactive/spot.net)
 
 # Spot​​ .NET
-**Spot .NET* is a lightweight C# SDK for controlling [Boston Dynamics](https://www.bostondynamics.com/) robots.
+**Spot .NET** is a lightweight C# SDK for controlling [Boston Dynamics](https://www.bostondynamics.com/) robots.
 
 ## Functionality
 - Easily **connect and authenticate** to multiple robots of different types over grpc connection
