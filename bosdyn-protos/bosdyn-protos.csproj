@@ -1,0 +1,97 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Google.Protobuf" Version="3.17.3" />
+    <PackageReference Include="Grpc" Version="2.23.0" />
+    <PackageReference Include="Grpc.Core" Version="2.40.0" />
+    <PackageReference Include="Grpc.Core.Api" Version="2.40.0" />
+    <PackageReference Include="Grpc.Tools" Version="2.23.0" PrivateAssets="All" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Protobuf Include="google/protobuf/any.proto" Link="any.proto" />
+    <Protobuf Include="google/protobuf/duration.proto" Link="duration.proto" />
+    <Protobuf Include="google/protobuf/field_mask.proto" Link="field_mask.proto" />
+    <Protobuf Include="google/protobuf/timestamp.proto" Link="timestamp.proto" />
+    <Protobuf Include="google/protobuf/wrappers.proto" Link="wrappers.proto" />
+    <Protobuf Include="bosdyn/api/arm_command.proto" Link="arm_command.proto" />
+    <Protobuf Include="bosdyn/api/arm_surface_contact.proto" Link="arm_surface_contact.proto" />
+    <Protobuf Include="bosdyn/api/arm_surface_contact_service.proto" Link="arm_surface_contact_service.proto" />
+    <Protobuf Include="bosdyn/api/auth.proto" Link="auth.proto" />
+    <Protobuf Include="bosdyn/api/auth_service.proto" Link="auth_service.proto" />
+    <Protobuf Include="bosdyn/api/basic_command.proto" Link="basic_command.proto" />
+    <Protobuf Include="bosdyn/api/bddf.proto" Link="bddf.proto" />
+    <Protobuf Include="bosdyn/api/docking.proto" Link="docking.proto" />
+    <Protobuf Include="bosdyn/api/docking_service.proto" Link="docking_service.proto" />
+    <Protobuf Include="bosdyn/api/data_acquisition.proto" Link="data_acquisition.proto" />
+    <Protobuf Include="bosdyn/api/data_acquisition_plugin_service.proto" Link="data_acquisition_plugin_service.proto" />
+    <Protobuf Include="bosdyn/api/data_acquisition_service.proto" Link="data_acquisition_service.proto" />
+    <Protobuf Include="bosdyn/api/data_acquisition_store.proto" Link="data_acquisition_store.proto" />
+    <Protobuf Include="bosdyn/api/data_acquisition_store_service.proto" Link="data_acquisition_store_service.proto" />
+    <Protobuf Include="bosdyn/api/data_buffer.proto" Link="data_buffer.proto" />
+    <Protobuf Include="bosdyn/api/data_buffer_service.proto" Link="data_buffer_service.proto" />
+    <Protobuf Include="bosdyn/api/data_chunk.proto" Link="data_chunk.proto" />
+    <Protobuf Include="bosdyn/api/data_index.proto" Link="data_index.proto" />
+    <Protobuf Include="bosdyn/api/data_service.proto" Link="data_service.proto" />
+    <Protobuf Include="bosdyn/api/directory.proto" Link="directory.proto" />
+    <Protobuf Include="bosdyn/api/directory_registration.proto" Link="directory_registration.proto" />
+    <Protobuf Include="bosdyn/api/directory_registration_service.proto" Link="directory_registration_service.proto" />
+    <Protobuf Include="bosdyn/api/directory_service.proto" Link="directory_service.proto" />
+    <Protobuf Include="bosdyn/api/estop.proto" Link="estop.proto" />
+    <Protobuf Include="bosdyn/api/estop_service.proto" Link="estop_service.proto" />
+    <Protobuf Include="bosdyn/api/fault_service.proto" Link="fault_service.proto" />
+    <Protobuf Include="bosdyn/api/full_body_command.proto" Link="full_body_command.proto" />
+    <Protobuf Include="bosdyn/api/geometry.proto" Link="geometry.proto" />
+    <Protobuf Include="bosdyn/api/gripper_command.proto" Link="gripper_command.proto" />
+    <Protobuf Include="bosdyn/api/header.proto" Link="header.proto" />
+    <Protobuf Include="bosdyn/api/image.proto" Link="image.proto" />
+    <Protobuf Include="bosdyn/api/image_service.proto" Link="image_service.proto" />
+    <Protobuf Include="bosdyn/api/ir_enable_disable.proto" Link="ir_enable_disable.proto" />
+    <Protobuf Include="bosdyn/api/ir_enable_disable_service.proto" Link="ir_enable_disable_service.proto" />
+    <Protobuf Include="bosdyn/api/lease.proto" Link="lease.proto" />
+    <Protobuf Include="bosdyn/api/lease_service.proto" Link="lease_service.proto" />
+    <Protobuf Include="bosdyn/api/license.proto" Link="license.proto" />
+    <Protobuf Include="bosdyn/api/license_service.proto" Link="license_service.proto" />
+    <Protobuf Include="bosdyn/api/local_grid.proto" Link="local_grid.proto" />
+    <Protobuf Include="bosdyn/api/local_grid_service.proto" Link="local_grid_service.proto" />
+    <Protobuf Include="bosdyn/api/log_annotation.proto" Link="log_annotation.proto" />
+    <Protobuf Include="bosdyn/api/log_annotation_service.proto" Link="log_annotation_service.proto" />
+    <Protobuf Include="bosdyn/api/manipulation_api.proto" Link="manipulation_api.proto" />
+    <Protobuf Include="bosdyn/api/manipulation_api_service.proto" Link="manipulation_api_service.proto" />
+    <Protobuf Include="bosdyn/api/mobility_command.proto" Link="mobility_command.proto" />
+    <Protobuf Include="bosdyn/api/network_compute_bridge.proto" Link="network_compute_bridge.proto" />
+    <Protobuf Include="bosdyn/api/network_compute_bridge_service.proto" Link="network_compute_bridge_service.proto" />
+    <Protobuf Include="bosdyn/api/network_stats.proto" Link="network_stats.proto" />
+    <Protobuf Include="bosdyn/api/parameter.proto" Link="parameter.proto" />
+    <Protobuf Include="bosdyn/api/payload.proto" Link="payload.proto" />
+    <Protobuf Include="bosdyn/api/payload_estimation.proto" Link="payload_estimation.proto" />
+    <Protobuf Include="bosdyn/api/payload_registration.proto" Link="payload_registration.proto" />
+    <Protobuf Include="bosdyn/api/payload_registration_service.proto" Link="payload_registration_service.proto" />
+    <Protobuf Include="bosdyn/api/payload_service.proto" Link="payload_service.proto" />
+    <Protobuf Include="bosdyn/api/point_cloud.proto" Link="point_cloud.proto" />
+    <Protobuf Include="bosdyn/api/point_cloud_service.proto" Link="point_cloud_service.proto" />
+    <Protobuf Include="bosdyn/api/power.proto" Link="power.proto" />
+    <Protobuf Include="bosdyn/api/power_service.proto" Link="power_service.proto" />
+    <Protobuf Include="bosdyn/api/robot_command.proto" Link="robot_command.proto" />
+    <Protobuf Include="bosdyn/api/robot_command_service.proto" Link="robot_command_service.proto" />
+    <Protobuf Include="bosdyn/api/robot_id.proto" Link="robot_id.proto" />
+    <Protobuf Include="bosdyn/api/robot_id_service.proto" Link="robot_id_service.proto" />
+    <Protobuf Include="bosdyn/api/robot_state.proto" Link="robot_state.proto" />
+    <Protobuf Include="bosdyn/api/robot_state_service.proto" Link="robot_state_service.proto" />
+    <Protobuf Include="bosdyn/api/service_fault.proto" Link="service_fault.proto" />
+    <Protobuf Include="bosdyn/api/sparse_features.proto" Link="sparse_features.proto" />
+    <Protobuf Include="bosdyn/api/stairs.proto" Link="stairs.proto" />
+    <Protobuf Include="bosdyn/api/synchronized_command.proto" Link="synchronized_command.proto" />
+    <Protobuf Include="bosdyn/api/time_range.proto" Link="time_range.proto" />
+    <Protobuf Include="bosdyn/api/time_sync.proto" Link="time_sync.proto" />
+    <Protobuf Include="bosdyn/api/time_sync_service.proto" Link="time_sync_service.proto" />
+    <Protobuf Include="bosdyn/api/trajectory.proto" Link="trajectory.proto" />
+    <Protobuf Include="bosdyn/api/world_object.proto" Link="world_object.proto" />
+    <Protobuf Include="bosdyn/api/world_object_service.proto" Link="world_object_service.proto" />
+  </ItemGroup>
+
+</Project>
