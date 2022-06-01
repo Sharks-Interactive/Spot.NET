@@ -7,6 +7,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "spot-sdk", "spot-sdk\spot-s
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "bosdyn-protos", "bosdyn-protos\bosdyn-protos.csproj", "{3C83714E-79AF-44D8-A9B3-6ED5A6B6E793}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "spot-sdk.test", "spot-sdk.test\spot-sdk.test.csproj", "{AFBF9843-15A1-4BE4-9E41-CF0076F977C0}"
+	ProjectSection(ProjectDependencies) = postProject
+		{06B8913B-CCB4-4EB6-BD8F-86B88C5ED93C} = {06B8913B-CCB4-4EB6-BD8F-86B88C5ED93C}
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +26,10 @@ Global
 		{3C83714E-79AF-44D8-A9B3-6ED5A6B6E793}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3C83714E-79AF-44D8-A9B3-6ED5A6B6E793}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3C83714E-79AF-44D8-A9B3-6ED5A6B6E793}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AFBF9843-15A1-4BE4-9E41-CF0076F977C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AFBF9843-15A1-4BE4-9E41-CF0076F977C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AFBF9843-15A1-4BE4-9E41-CF0076F977C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AFBF9843-15A1-4BE4-9E41-CF0076F977C0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
