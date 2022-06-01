@@ -10,11 +10,11 @@ package bosdyn.api;
 
 option java_outer_classname = "RobotCommandProto";
 
-import "Protos/full_body_command.proto";
-import "Protos/header.proto";
-import "Protos/lease.proto";
-import "Protos/mobility_command.proto";
-import "Protos/synchronized_command.proto";
+import "bosdyn/api/full_body_command.proto";
+import "bosdyn/api/header.proto";
+import "bosdyn/api/lease.proto";
+import "bosdyn/api/mobility_command.proto";
+import "bosdyn/api/synchronized_command.proto";
 
 // A command for a robot to execute.
 // The server decides if a set of commands is valid for a given robot and configuration.

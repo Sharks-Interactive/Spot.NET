@@ -10,7 +10,7 @@ package bosdyn.api;
 
 option java_outer_classname = "StairsProto";
 
-import "Protos/geometry.proto";
+import "bosdyn/api/geometry.proto";
 
 message StairTransform {
     // The staircase origin is the bottom-center of the first rise.

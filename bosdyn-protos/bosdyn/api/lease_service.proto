@@ -10,7 +10,7 @@ package bosdyn.api;
 
 option java_outer_classname = "LeaseServiceProto";
 
-import "Protos/lease.proto";
+import "bosdyn/api/lease.proto";
 
 // LeaseService provides Leases of shared resources to clients.
 // An example of a shared resource is the set of leg motors on Spot, which

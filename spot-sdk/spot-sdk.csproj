@@ -5,20 +5,23 @@
     <RootNamespace>Sharks.Spot</RootNamespace>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-	<Version>0.1.0</Version>
+	<Version>0.1.2</Version>
 	<Authors>Sharks Interactive</Authors>
 	<Product>Spot.NET</Product>
 	<AssemblyName>Spot.NET</AssemblyName>
-	<Description>A sdk for communicating with and controlling Boston Dynamics Spot Robot from the .NET platform.</Description>
+	<PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+	<Description>A .NET SDK for communicating with Boston Dynamics Robots from C#.</Description>
 	<Copyright>ISC License</Copyright>
 	<PackageProjectUrl>https://www.sharksinteractive.net/spot-net</PackageProjectUrl>
 	<PackageReadmeFile>Readme.md</PackageReadmeFile>
-	<RepositoryUrl>https://github.com/Sharks-Interactive/Spot-Net</RepositoryUrl>
+	<RepositoryUrl>https://github.com/Sharks-Interactive/Spot.Net</RepositoryUrl>
 	<RepositoryType>git</RepositoryType>
+	<PackageIconUrl>https://i.imgur.com/ok84Ih6.png</PackageIconUrl>
 	<PackageTags>c-sharp,spot,boston-dynamics,net-standard,library,sdk</PackageTags>
 	<PackageReleaseNotes>Initial Release:
 - Connect to Spot
 - Send a sit command</PackageReleaseNotes>
+	<Title>Spot .NET</Title>
 	<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
   </PropertyGroup>
 
@@ -32,5 +35,9 @@
 	    <Pack>True</Pack>
 	    <PackagePath>\</PackagePath>
 	  </None>
+	</ItemGroup>
+
+	<ItemGroup>
+		<None Include="LICENSE.txt" Pack="true" PackagePath=""/>
 	</ItemGroup>
 </Project>

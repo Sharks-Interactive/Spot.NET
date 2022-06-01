@@ -8,7 +8,7 @@ syntax = "proto3";
 
 package bosdyn.api;
 
-import "Protos/network_compute_bridge.proto";
+import "bosdyn/api/network_compute_bridge.proto";
 
 // RPCs for sending images or other data to networked server for computation.
 service NetworkComputeBridge {

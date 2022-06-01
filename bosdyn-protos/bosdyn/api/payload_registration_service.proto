@@ -10,7 +10,7 @@ package bosdyn.api;
 
 option java_outer_classname = "PayloadRegistrationServiceProto";
 
-import "Protos/payload_registration.proto";
+import "bosdyn/api/payload_registration.proto";
 
 // This service provides a way to register new payloads.
 service PayloadRegistrationService {

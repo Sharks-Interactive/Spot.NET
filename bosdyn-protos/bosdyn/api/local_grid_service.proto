@@ -10,7 +10,7 @@ package bosdyn.api;
 
 option java_outer_classname = "LocalGridServiceProto";
 
-import "Protos/local_grid.proto";
+import "bosdyn/api/local_grid.proto";
 
 // The map service provides access multiple kinds of cell-based map data.
 // It supports querying for the list of available types of local grids provided by the service,

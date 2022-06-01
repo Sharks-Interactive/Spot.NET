@@ -10,9 +10,9 @@ package bosdyn.api;
 
 option java_outer_classname = "DataIndexProto";
 
-import "Protos/data_buffer.proto";
-import "Protos/header.proto";
-import "Protos/time_range.proto";
+import "bosdyn/api/data_buffer.proto";
+import "bosdyn/api/header.proto";
+import "bosdyn/api/time_range.proto";
 import "google/protobuf/timestamp.proto";
 import "google/protobuf/wrappers.proto";
 

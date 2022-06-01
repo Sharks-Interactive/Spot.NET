@@ -10,11 +10,11 @@ package bosdyn.api;
 
 option java_outer_classname = "ManipulationApiProto";
 
-import "Protos/geometry.proto";
-import "Protos/header.proto";
-import "Protos/image.proto";
-import "Protos/lease.proto";
-import "Protos/robot_state.proto";
+import "bosdyn/api/geometry.proto";
+import "bosdyn/api/header.proto";
+import "bosdyn/api/image.proto";
+import "bosdyn/api/lease.proto";
+import "bosdyn/api/robot_state.proto";
 import "google/protobuf/wrappers.proto";
 
 message WalkToObjectRayInWorld {

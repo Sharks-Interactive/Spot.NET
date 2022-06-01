@@ -10,8 +10,8 @@ package bosdyn.api;
 
 option java_outer_classname = "FullBodyCommandProto";
 
-import "Protos/basic_command.proto";
-import "Protos/payload_estimation.proto";
+import "bosdyn/api/basic_command.proto";
+import "bosdyn/api/payload_estimation.proto";
 import "google/protobuf/any.proto";
 
 

@@ -10,9 +10,9 @@ package bosdyn.api;
 
 option java_outer_classname = "ArmSurfaceContactServiceProto";
 
-import "Protos/header.proto";
-import "Protos/lease.proto";
-import "Protos/arm_surface_contact.proto";
+import "bosdyn/api/header.proto";
+import "bosdyn/api/lease.proto";
+import "bosdyn/api/arm_surface_contact.proto";
 
 service ArmSurfaceContactService {
     rpc ArmSurfaceContact(ArmSurfaceContactCommand) returns (ArmSurfaceContactResponse) {}

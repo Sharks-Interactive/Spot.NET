@@ -10,7 +10,7 @@ package bosdyn.api;
 
 option java_outer_classname = "AuthProto";
 
-import "Protos/header.proto";
+import "bosdyn/api/header.proto";
 
 // The GetAuthToken request message includes login information for the robot.
 message GetAuthTokenRequest {

@@ -10,7 +10,7 @@ package bosdyn.api;
 
 option java_outer_classname = "PowerServiceProto";
 
-import "Protos/power.proto";
+import "bosdyn/api/power.proto";
 
 // The power service for the robot that can power on/off the robot's motors.
 service PowerService {

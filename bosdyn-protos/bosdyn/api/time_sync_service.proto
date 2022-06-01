@@ -10,7 +10,7 @@ package bosdyn.api;
 
 option java_outer_classname = "TimeSyncServiceProto";
 
-import "Protos/time_sync.proto";
+import "bosdyn/api/time_sync.proto";
 
 // The time-sync service estimates the difference between server and client clocks.
 // Time synchronization is a tool which allows applications to work in a unified timebase with

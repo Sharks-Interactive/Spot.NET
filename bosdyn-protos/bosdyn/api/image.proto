@@ -9,8 +9,8 @@ syntax = "proto3";
 package bosdyn.api;
 option java_outer_classname = "ImageProto";
 
-import "Protos/header.proto";
-import "Protos/geometry.proto";
+import "bosdyn/api/header.proto";
+import "bosdyn/api/geometry.proto";
 import "google/protobuf/duration.proto";
 import "google/protobuf/timestamp.proto";
 

@@ -9,8 +9,8 @@ syntax = "proto3";
 package bosdyn.api;
 option java_outer_classname = "GripperCommandProto";
 
-import "Protos/basic_command.proto";
-import "Protos/trajectory.proto";
+import "bosdyn/api/basic_command.proto";
+import "bosdyn/api/trajectory.proto";
 import "google/protobuf/wrappers.proto";
 
 // The synchronized command message for commanding the gripper to move.

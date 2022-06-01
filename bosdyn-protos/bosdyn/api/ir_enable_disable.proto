@@ -9,7 +9,7 @@ syntax = "proto3";
 package bosdyn.api;
 option java_outer_classname = "IREnableDisableProto";
 
-import "Protos/header.proto";
+import "bosdyn/api/header.proto";
 
 message IREnableDisableRequest {
     RequestHeader header = 1;  ///< Common request header.

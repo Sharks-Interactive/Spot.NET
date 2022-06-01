@@ -11,7 +11,7 @@ package bosdyn.api;
 
 option java_outer_classname = "DataBufferServiceProto";
 
-import "Protos/data_buffer.proto";
+import "bosdyn/api/data_buffer.proto";
 
 // This service is a mechanism for adding information to the robot's log files.
 service DataBufferService {

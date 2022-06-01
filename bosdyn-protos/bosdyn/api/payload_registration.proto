@@ -9,9 +9,9 @@ syntax = "proto3";
 package bosdyn.api;
 option java_outer_classname = "PayloadRegistrationProto";
 
-import "Protos/payload.proto";
-import "Protos/header.proto";
-import "Protos/robot_id.proto";
+import "bosdyn/api/payload.proto";
+import "bosdyn/api/header.proto";
+import "bosdyn/api/robot_id.proto";
 
 // The RegisterPayload request message contains the payload information and secret to be
 // able to register it to the directory.

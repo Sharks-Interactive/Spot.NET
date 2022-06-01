@@ -9,10 +9,10 @@ syntax = "proto3";
 package bosdyn.api;
 option java_outer_classname = "ArmSurfaceContactProto";
 
-import "Protos/geometry.proto";
-import "Protos/gripper_command.proto";
-import "Protos/trajectory.proto";
-import "Protos/arm_command.proto";
+import "bosdyn/api/geometry.proto";
+import "bosdyn/api/gripper_command.proto";
+import "bosdyn/api/trajectory.proto";
+import "bosdyn/api/arm_command.proto";
 import "google/protobuf/wrappers.proto";
 
 

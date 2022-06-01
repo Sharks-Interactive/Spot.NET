@@ -9,9 +9,9 @@ syntax = "proto3";
 package bosdyn.api;
 option java_outer_classname = "PayloadProto";
 
-import "Protos/geometry.proto";
-import "Protos/header.proto";
-import "Protos/robot_id.proto";
+import "bosdyn/api/geometry.proto";
+import "bosdyn/api/header.proto";
+import "bosdyn/api/robot_id.proto";
 
 // A Payload describes a single payload installed on the Spot platform.
 // It includes all external information necessary to represent

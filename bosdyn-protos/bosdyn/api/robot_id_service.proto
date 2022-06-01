@@ -10,7 +10,7 @@ package bosdyn.api;
 
 option java_outer_classname = "RobotIdServiceProto";
 
-import "Protos/robot_id.proto";
+import "bosdyn/api/robot_id.proto";
 
 // RobotIdService provides mostly static identifying information about a robot.
 // User authentication is not required to access RobotIdService to assist with

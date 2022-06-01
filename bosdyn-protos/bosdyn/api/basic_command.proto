@@ -10,8 +10,8 @@ package bosdyn.api;
 
 option java_outer_classname = "BasicCommandProto";
 
-import "Protos/geometry.proto";
-import "Protos/trajectory.proto";
+import "bosdyn/api/geometry.proto";
+import "bosdyn/api/trajectory.proto";
 import "google/protobuf/timestamp.proto";
 import "google/protobuf/wrappers.proto";
 

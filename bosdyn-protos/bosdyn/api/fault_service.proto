@@ -10,7 +10,7 @@ package bosdyn.api;
 
 option java_outer_classname = "FaultServiceProto";
 
-import "Protos/service_fault.proto";
+import "bosdyn/api/service_fault.proto";
 
 // The service fault service enables modification of the robot state ServiceFaultState.
 service FaultService {

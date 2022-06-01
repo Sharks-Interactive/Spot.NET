@@ -13,7 +13,7 @@ option java_outer_classname = "TimeSyncProto";
 import "google/protobuf/timestamp.proto";
 import "google/protobuf/duration.proto";
 
-import "Protos/header.proto";
+import "bosdyn/api/header.proto";
 
 // Timestamp information from a full GRPC call round-trip.
 // These are used to estimate the round-trip communication time and difference between

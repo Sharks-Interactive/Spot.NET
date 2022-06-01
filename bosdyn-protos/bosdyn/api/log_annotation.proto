@@ -9,7 +9,7 @@ package bosdyn.api;
 
 option java_outer_classname = "LogAnnotationProto";
 
-import "Protos/header.proto";
+import "bosdyn/api/header.proto";
 import "google/protobuf/timestamp.proto";
 
 // DEPRECATED as of 2.1.0: Please use the DataBufferService instead of the LogAnnotationService.

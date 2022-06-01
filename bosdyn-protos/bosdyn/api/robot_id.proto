@@ -8,8 +8,8 @@ syntax = "proto3";
 
 package bosdyn.api;
 
-import "Protos/header.proto";
-import "Protos/parameter.proto";
+import "bosdyn/api/header.proto";
+import "bosdyn/api/parameter.proto";
 import "google/protobuf/timestamp.proto";
 
 option go_package = "bosdyn/api";

@@ -8,7 +8,7 @@ syntax = "proto3";
 
 option java_outer_classname = "DirectoryProto";
 
-import "Protos/header.proto";
+import "bosdyn/api/header.proto";
 import "google/protobuf/timestamp.proto";
 
 package bosdyn.api;

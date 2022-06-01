@@ -10,7 +10,7 @@ package bosdyn.api;
 
 option java_outer_classname = "PayloadAccessServiceProto";
 
-import "Protos/payload.proto";
+import "bosdyn/api/payload.proto";
 
 // This service provides a way to query for the currently-registered payloads.
 service PayloadService {

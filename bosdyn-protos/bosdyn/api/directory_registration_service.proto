@@ -10,7 +10,7 @@ package bosdyn.api;
 
 option java_outer_classname = "DirectoryRegistrationServiceProto";
 
-import "Protos/directory_registration.proto";
+import "bosdyn/api/directory_registration.proto";
 
 // DirectoryRegistrationService is a private class that lets services be
 // discovered by clients by adding them to a discovery database.  Services

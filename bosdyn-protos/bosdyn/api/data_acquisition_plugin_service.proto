@@ -10,7 +10,7 @@ package bosdyn.api;
 
 option java_outer_classname = "DataAcquisitionPluginServiceProto";
 
-import "Protos/data_acquisition.proto";
+import "bosdyn/api/data_acquisition.proto";
 
 
 // The DataAcquisitionPluginService is a gRPC service that a payload developer implements to retrieve

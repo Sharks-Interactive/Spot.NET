@@ -9,7 +9,7 @@ syntax = "proto3";
 package bosdyn.api;
 
 option java_outer_classname = "TrajectoryProto";
-import "Protos/geometry.proto";
+import "bosdyn/api/geometry.proto";
 import "google/protobuf/duration.proto";
 import "google/protobuf/timestamp.proto";
 import "google/protobuf/wrappers.proto";

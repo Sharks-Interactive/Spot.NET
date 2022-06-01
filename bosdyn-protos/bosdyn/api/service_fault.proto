@@ -9,7 +9,7 @@ syntax = "proto3";
 package bosdyn.api;
 option java_outer_classname = "ServiceFaultProto";
 
-import "Protos/header.proto";
+import "bosdyn/api/header.proto";
 import "google/protobuf/timestamp.proto";
 import "google/protobuf/duration.proto";
 

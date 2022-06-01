@@ -10,7 +10,7 @@ package bosdyn.api;
 
 option java_outer_classname = "LogAnnotationServiceProto";
 
-import "Protos/log_annotation.proto";
+import "bosdyn/api/log_annotation.proto";
 
 // DEPRECATED as of 2.1.0: Please use the DataBufferService instead of the LogAnnotationService.
 // The LogAnnotationService is deprecated in release 2.1 and may be removed in the

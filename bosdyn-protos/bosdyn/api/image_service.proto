@@ -10,7 +10,7 @@ package bosdyn.api;
 
 option java_outer_classname = "ImageServiceProto";
 
-import "Protos/image.proto";
+import "bosdyn/api/image.proto";
 
 // An Image service provides access to one or more images, for example from cameras. It
 // supports querying for the list of available images provided by the service and then

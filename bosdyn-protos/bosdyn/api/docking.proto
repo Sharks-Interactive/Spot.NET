@@ -10,8 +10,8 @@ package bosdyn.api.docking;
 
 option java_outer_classname = "DockingProto";
 
-import "Protos/header.proto";
-import "Protos/lease.proto";
+import "bosdyn/api/header.proto";
+import "bosdyn/api/lease.proto";
 import "google/protobuf/timestamp.proto";
 
 

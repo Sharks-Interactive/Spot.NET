@@ -10,7 +10,7 @@ package bosdyn.api;
 
 option java_outer_classname = "IREnableDisableServiceProto";
 
-import "Protos/ir_enable_disable.proto";
+import "bosdyn/api/ir_enable_disable.proto";
 
 service IREnableDisableService {
     rpc IREnableDisable(IREnableDisableRequest) returns (IREnableDisableResponse) {}

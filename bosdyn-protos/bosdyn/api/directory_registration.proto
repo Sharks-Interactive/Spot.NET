@@ -10,8 +10,8 @@ package bosdyn.api;
 
 option java_outer_classname = "DirectoryRegistrationProto";
 
-import "Protos/directory.proto";
-import "Protos/header.proto";
+import "bosdyn/api/directory.proto";
+import "bosdyn/api/header.proto";
 
 // The RegisterService request message sends the service's entry and endpoint to the robot's directory.
 // This Request serves as a heartbeat to the Directory.

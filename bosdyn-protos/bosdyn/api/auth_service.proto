@@ -10,7 +10,7 @@ package bosdyn.api;
 
 option java_outer_classname = "AuthServiceProto";
 
-import "Protos/auth.proto";
+import "bosdyn/api/auth.proto";
 
 // The AuthService provides clients the ability to convert a user/password pair into a token. The
 // token can then be added to the http2 headers for future requests in order to establish the

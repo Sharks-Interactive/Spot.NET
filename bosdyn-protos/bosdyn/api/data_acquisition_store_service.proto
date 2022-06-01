@@ -10,7 +10,7 @@ package bosdyn.api;
 
 option java_outer_classname = "DataAcquisitionStoreServiceProto";
 
-import "Protos/data_acquisition_store.proto";
+import "bosdyn/api/data_acquisition_store.proto";
 
 // The DataAcquisitionStoreService is used to store data (images, data, metadata) on the robot
 // in association with the DataIdentifiers specified by the DataAcquisitionService. Additionally,

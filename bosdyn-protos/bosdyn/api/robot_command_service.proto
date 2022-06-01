@@ -9,7 +9,7 @@ syntax = "proto3";
 package bosdyn.api;
 option java_outer_classname = "RobotCommandServiceProto";
 
-import "Protos/robot_command.proto";
+import "bosdyn/api/robot_command.proto";
 
 // The robot command service allows a client application to control and move the robot.
 service RobotCommandService {

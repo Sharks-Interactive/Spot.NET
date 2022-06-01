@@ -10,7 +10,7 @@ package bosdyn.api;
 
 option java_outer_classname = "DataAcquisitionServiceProto";
 
-import "Protos/data_acquisition.proto";
+import "bosdyn/api/data_acquisition.proto";
 
 // The DataAcquisitionService is the main data acquisition service run on robot, which recieves
 // incoming requests and sends queries to all directory-registered DataAcquisitionPluginServices.

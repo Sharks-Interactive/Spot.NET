@@ -10,7 +10,7 @@ package bosdyn.api;
 
 option java_outer_classname = "PayloadEstimationProto";
 
-import "Protos/payload.proto";
+import "bosdyn/api/payload.proto";
 
 // Command the robot to stand and execute a routine to estimate the mass properties of an
 // unregistered payload attached to the robot.

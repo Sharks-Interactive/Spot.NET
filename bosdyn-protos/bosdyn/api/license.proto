@@ -10,7 +10,7 @@ package bosdyn.api;
 
 option java_outer_classname = "LicenseProto";
 
-import "Protos/header.proto";
+import "bosdyn/api/header.proto";
 import "google/protobuf/timestamp.proto";
 
 message LicenseInfo {

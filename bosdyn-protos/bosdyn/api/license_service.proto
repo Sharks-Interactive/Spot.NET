@@ -10,7 +10,7 @@ package bosdyn.api;
 
 option java_outer_classname = "LicenseServiceProto";
 
-import "Protos/license.proto";
+import "bosdyn/api/license.proto";
 
 // The LicenseService allows clients to query the currently installed license on robot.
 service LicenseService {

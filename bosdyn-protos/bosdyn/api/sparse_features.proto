@@ -10,7 +10,7 @@ package bosdyn.api;
 
 option java_outer_classname = "SparseFeaturesProto";
 
-import "Protos/geometry.proto";
+import "bosdyn/api/geometry.proto";
 
 // A point of interest in an image expressed as a pixel coordinate with associated metadata.
 message Keypoint {

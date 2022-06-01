@@ -10,7 +10,7 @@ package bosdyn.api;
 
 option java_outer_classname = "RobotStateServiceProto";
 
-import "Protos/robot_state.proto";
+import "bosdyn/api/robot_state.proto";
 
 // The robot state service tracks all information about the measured and computed states of the robot at the current time.
 service RobotStateService {

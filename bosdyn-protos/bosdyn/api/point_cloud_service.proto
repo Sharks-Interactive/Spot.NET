@@ -10,7 +10,7 @@ package bosdyn.api;
 
 option java_outer_classname = "PointCloudServiceProto";
 
-import "Protos/point_cloud.proto";
+import "bosdyn/api/point_cloud.proto";
 
 // The point cloud service provides access to one or more point cloud sources, for example
 // from a lidar. It supports querying the list of available sources provided by the service

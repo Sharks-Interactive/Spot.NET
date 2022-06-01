@@ -10,7 +10,7 @@ package bosdyn.api;
 
 option java_outer_classname = "DirectoryServiceProto";
 
-import "Protos/directory.proto";
+import "bosdyn/api/directory.proto";
 
 // DirectoryService lets clients discover which API services are available on a robot.
 service DirectoryService {

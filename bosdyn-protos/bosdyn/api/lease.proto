@@ -9,7 +9,7 @@ syntax = "proto3";
 package bosdyn.api;
 option java_outer_classname = "LeaseProto";
 
-import "Protos/header.proto";
+import "bosdyn/api/header.proto";
 
 // Leases are used to verify that a client has exclusive access to a shared
 // resources. Examples of shared resources are the motors for a robot, or

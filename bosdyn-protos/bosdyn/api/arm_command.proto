@@ -9,9 +9,9 @@ syntax = "proto3";
 package bosdyn.api;
 option java_outer_classname = "ArmCommandProto";
 
-import "Protos/basic_command.proto";
-import "Protos/geometry.proto";
-import "Protos/trajectory.proto";
+import "bosdyn/api/basic_command.proto";
+import "bosdyn/api/geometry.proto";
+import "bosdyn/api/trajectory.proto";
 import "google/protobuf/timestamp.proto";
 import "google/protobuf/wrappers.proto";
 import "google/protobuf/duration.proto";

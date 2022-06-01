@@ -9,8 +9,8 @@ syntax = "proto3";
 package bosdyn.api;
 option java_outer_classname = "LocalGridProto";
 
-import "Protos/geometry.proto";
-import "Protos/header.proto";
+import "bosdyn/api/geometry.proto";
+import "bosdyn/api/header.proto";
 import "google/protobuf/timestamp.proto";
 
 // Representation of an available type of local grid.

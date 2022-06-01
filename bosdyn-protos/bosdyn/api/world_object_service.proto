@@ -10,7 +10,7 @@ package bosdyn.api;
 
 option java_outer_classname = "WorldObjectServiceProto";
 
-import "Protos/world_object.proto";
+import "bosdyn/api/world_object.proto";
 
 // The world object service provides a way to track and store objects detected in the world around the robot.
 service WorldObjectService {

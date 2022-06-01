@@ -9,10 +9,10 @@ syntax = "proto3";
 package bosdyn.api;
 option java_outer_classname = "RobotStateProto";
 
-import "Protos/geometry.proto";
-import "Protos/header.proto";
-import "Protos/parameter.proto";
-import "Protos/service_fault.proto";
+import "bosdyn/api/geometry.proto";
+import "bosdyn/api/header.proto";
+import "bosdyn/api/parameter.proto";
+import "bosdyn/api/service_fault.proto";
 import "google/protobuf/timestamp.proto";
 import "google/protobuf/duration.proto";
 import "google/protobuf/wrappers.proto";

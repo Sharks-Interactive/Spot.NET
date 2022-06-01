@@ -11,7 +11,7 @@ package bosdyn.api;
 
 option java_outer_classname = "DataServiceProto";
 
-import "Protos/data_index.proto";
+import "bosdyn/api/data_index.proto";
 
 // The DataService is a mechanism for querying and managing data stored on robot.
 service DataService {

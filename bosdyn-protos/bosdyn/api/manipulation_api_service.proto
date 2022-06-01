@@ -8,7 +8,7 @@ syntax = "proto3";
 
 package bosdyn.api;
 
-import "Protos/manipulation_api.proto";
+import "bosdyn/api/manipulation_api.proto";
 
 service ManipulationApiService {
     rpc ManipulationApi(ManipulationApiRequest) returns (ManipulationApiResponse) {}

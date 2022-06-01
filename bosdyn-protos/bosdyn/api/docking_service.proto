@@ -10,7 +10,7 @@ package bosdyn.api.docking;
 
 option java_outer_classname = "DockingServiceProto";
 
-import "Protos/docking.proto";
+import "bosdyn/api/docking.proto";
 
 // The DockingService provides an interface to dock and undock the robot from Spot Docks,
 // as well as get feedback on command status, and get the current docked status of the robot.

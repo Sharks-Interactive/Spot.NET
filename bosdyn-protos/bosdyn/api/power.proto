@@ -10,10 +10,10 @@ package bosdyn.api;
 
 option java_outer_classname = "PowerProto";
 
-import "Protos/header.proto";
-import "Protos/lease.proto";
-import "Protos/license.proto";
-import "Protos/robot_state.proto";
+import "bosdyn/api/header.proto";
+import "bosdyn/api/lease.proto";
+import "bosdyn/api/license.proto";
+import "bosdyn/api/robot_state.proto";
 
 // Feedback on the current state of a power command on the robot.
 enum PowerCommandStatus {
