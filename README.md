@@ -1,6 +1,6 @@
 ﻿
 <p align='center'>
-  <img src="https://imgur.com/FiqCe1Z" />
+  <img src="https://i.imgur.com/FiqCe1Z.png" />
 </p>
 
 ![npm version](https://img.shields.io/nuget/v/@sharks-interactive/spot.net)  ![npm downloads](https://img.shields.io/nuget/dt/@sharks-interactive/spot.net)  ![npm downloads](https://img.shields.io/github/license/@sharks-interactive/spot.net)
