@@ -39,12 +39,16 @@ public static int main()
 {
 	// Create Spot Robot object with credentials to authenticate with it
 	Robot Spot = new Robot(
-		new Credentials()
+		new ContactInfo()
 		{
-			Username = "SpotUsername",
-			Password = "SpotPassword",
-			Address = "192.168.0.0.2:443"
-		}
+			Credentials = new RobotCredentials
+			{
+				Username = "SpotUsername",
+				Password = "SpotPassword",
+				Address = "192.168.0.0:443"
+			}
+		},
+		"Program Name"
 	);
 
 	// When your ready call connect to create the authenticated channel
@@ -64,12 +68,16 @@ public static int main()
 {
 	// Create Spot Robot object with credentials to authenticate with it
 	Robot Spot = new Robot(
-		new Credentials()
+		new ContactInfo()
 		{
-			Username = "SpotUsername",
-			Password = "SpotPassword",
-			Address = "192.168.0.0.2:443"
-		}
+			Credentials = new RobotCredentials
+			{
+				Username = "SpotUsername",
+				Password = "SpotPassword",
+				Address = "192.168.0.0:443"
+			}
+		},
+		"Program Name"
 	);
 
 	Spot.Connect();
@@ -97,7 +105,7 @@ private void WalkFinishedCallback()
 
 | Option | Type | Description |
 | ------ | ---- | ----------- |
-| Creds  | Credentials | A struct containing all the necessary credentials to authenticate with the Robot. |
+| ContactInfo  | ContactInfo | A struct containing all the necessary credentials to talk and authenticate with the Robot. |
 
 
 ## How it works:

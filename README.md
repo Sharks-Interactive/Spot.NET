@@ -1,9 +1,6 @@
-﻿
-<p align='center'>
-  <img src="https://i.imgur.com/FiqCe1Z.png" />
-</p>
+﻿![Spot .NET logomark](https://i.imgur.com/FiqCe1Z.png")
 
-![npm version](https://img.shields.io/nuget/v/@sharks-interactive/spot.net)  ![npm downloads](https://img.shields.io/nuget/dt/@sharks-interactive/spot.net)  ![npm downloads](https://img.shields.io/github/license/@sharks-interactive/spot.net)
+![npm version](https://img.shields.io/nuget/v/spot.net)  ![npm downloads](https://img.shields.io/nuget/dt/spot.net)  ![npm downloads](https://img.shields.io/github/license/spot.net)
 
 # Spot​​ .NET
 **Spot .NET** is a lightweight C# SDK for controlling [Boston Dynamics](https://www.bostondynamics.com/) robots.
@@ -16,8 +13,20 @@
 - **Exposes authenticated Spot Channel** to add your own functionality such as receiving data from Spot
 
 ## Usage:
+
+## PM:
 ```
-nuget install @sharks-interactive/spot.net
+Install-Package Spot.NET -Version 0.1.0
+```
+
+## .NET CLI:
+```
+dotnet add package Spot.NET --version 0.1.0
+```
+
+## Package Reference:
+```
+<PackageReference Include="Spot.NET" Version="0.1.0" />
 ```
 
 ## Quick Examples:
@@ -30,12 +39,16 @@ public static int main()
 {
 	// Create Spot Robot object with credentials to authenticate with it
 	Robot Spot = new Robot(
-		new Credentials()
+		new ContactInfo()
 		{
-			Username = "SpotUsername",
-			Password = "SpotPassword",
-			Address = "192.168.0.0.2:443"
-		}
+			Credentials = new RobotCredentials
+			{
+				Username = "SpotUsername",
+				Password = "SpotPassword",
+				Address = "192.168.0.0:443"
+			}
+		},
+		"Program Name"
 	);
 
 	// When your ready call connect to create the authenticated channel
@@ -55,12 +68,16 @@ public static int main()
 {
 	// Create Spot Robot object with credentials to authenticate with it
 	Robot Spot = new Robot(
-		new Credentials()
+		new ContactInfo()
 		{
-			Username = "SpotUsername",
-			Password = "SpotPassword",
-			Address = "192.168.0.0.2:443"
-		}
+			Credentials = new RobotCredentials
+			{
+				Username = "SpotUsername",
+				Password = "SpotPassword",
+				Address = "192.168.0.0:443"
+			}
+		},
+		"Program Name"
 	);
 
 	Spot.Connect();
@@ -88,7 +105,7 @@ private void WalkFinishedCallback()
 
 | Option | Type | Description |
 | ------ | ---- | ----------- |
-| Creds  | Credentials | A struct containing all the necessary credentials to authenticate with the Robot. |
+| ContactInfo  | ContactInfo | A struct containing all the necessary credentials to talk and authenticate with the Robot. |
 
 
 ## How it works:
