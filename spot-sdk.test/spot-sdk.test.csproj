@@ -6,14 +6,21 @@
     <Nullable>enable</Nullable>
 
     <IsPackable>false</IsPackable>
+
+    <UserSecretsId>f6fb9bd8-5ca7-4f17-af54-1ae01c77ff55</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Configuration.UserSecrets" Version="5.0.0" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.11.0" />
     <PackageReference Include="NUnit" Version="3.13.2" />
     <PackageReference Include="NUnit3TestAdapter" Version="4.0.0" />
     <PackageReference Include="coverlet.collector" Version="3.1.0" />
 	<ProjectReference Include="..\spot-sdk\spot-sdk.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+	  <DotNetCliToolReference Include="Microsoft.Extensions.SecretManager.Tools" Version="1.0.1" />
   </ItemGroup>
 
 </Project>
