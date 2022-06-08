@@ -1,6 +1,6 @@
 ﻿![Spot .NET logomark](https://i.imgur.com/FiqCe1Z.png")
 
-![npm version](https://img.shields.io/nuget/v/spot.net)  ![npm downloads](https://img.shields.io/nuget/dt/spot.net)  ![npm downloads](https://img.shields.io/github/license/spot.net)
+![npm version](https://img.shields.io/nuget/v/spot.net)  ![npm downloads](https://img.shields.io/nuget/dt/spot.net)  ![license](https://img.shields.io/github/license/sharks-interactive/spot.net)
 
 # Spot​​ .NET
 **Spot .NET** is a lightweight C# SDK for controlling [Boston Dynamics](https://www.bostondynamics.com/) robots.
