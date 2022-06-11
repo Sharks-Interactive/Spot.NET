@@ -16,7 +16,7 @@ namespace Sharks.Spot.RobotSystems
             RobotCommand _sitCommandRequest = new RobotCommand() { SynchronizedCommand = _synchroCmd };
 
             // Send request
-            RobotCommandRequest _robotCommandRequest = new RobotCommandRequest() { Header = Robot.GetRequestHeader(), Lease = LeaseSystem.AquireLease(Robot), Command = _sitCommandRequest };
+            RobotCommandRequest _robotCommandRequest = new RobotCommandRequest() { Header = Robot.GetRequestHeader(), Lease = Robot.Lease, Command = _sitCommandRequest };
             RobotCommandResponse _robotCommandResponse = _robotCommandService.RobotCommand(_robotCommandRequest, Robot.RobotContact.Headers);
 
             return Util.ResultFromBool(_robotCommandResponse.Header.Error.Code.ResultOk());

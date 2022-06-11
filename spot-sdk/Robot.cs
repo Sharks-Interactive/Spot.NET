@@ -15,6 +15,15 @@ namespace Sharks.Spot
         public ContactInfo RobotContact { get => _contactInfo; }
 
         /// <summary>
+        /// Gets the robot lease, acquiring one if none exists
+        /// </summary>
+        public Lease Lease { get
+            {
+                if (_contactInfo.Lease != null) return _contactInfo.Lease;
+                return RobotSystems.LeaseSystem.AquireLease(this);
+            } }
+
+        /// <summary>
         /// How we should identify ourselves to spot
         /// </summary>
         public string ClientName = "Pilot";
@@ -68,9 +77,7 @@ namespace Sharks.Spot
             _contactInfo.Lease = RobotSystems.LeaseSystem.AquireLease(this);
             if (_contactInfo.Lease == null) return Result.Error;
 
-
-
-            return Result.Success;
+            return RobotSystems.PowerSystem.PowerOn(this);
         }
 
         /// <summary>
