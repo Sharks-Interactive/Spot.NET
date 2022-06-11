@@ -5,7 +5,7 @@ namespace Sharks.Spot
     /// <summary>
     /// Everything needed to talk to a robot
     /// </summary>
-    public struct ContactInfo
+    public class ContactInfo
     {
         /// <summary>
         /// Credentials to authenticate with the robot
@@ -15,7 +15,7 @@ namespace Sharks.Spot
         /// <summary>
         /// The channel used to communicate with the robot over
         /// </summary>
-        public Channel Channel;
+        public Channel? Channel;
 
         /// <summary>
         /// Headers to contact the robot with
@@ -25,6 +25,11 @@ namespace Sharks.Spot
         /// <summary>
         /// The lease we currently have on the robot
         /// </summary>
-        public Bosdyn.Api.Lease Lease;
+        public Bosdyn.Api.Lease? Lease;
+
+        public ContactInfo()
+        {
+            Headers = new();
+        }
     }
 }

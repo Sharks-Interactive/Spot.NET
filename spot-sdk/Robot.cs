@@ -35,7 +35,7 @@ namespace Sharks.Spot
 
         ~Robot()
         {
-            _contactInfo.Channel.ShutdownAsync();
+            _contactInfo.Channel?.ShutdownAsync();
         }
 
         /// <summary>
