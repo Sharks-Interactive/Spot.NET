@@ -64,6 +64,7 @@ namespace Sharks.Spot
             // Closes the old channel and recreates a new authenticated one with the creds
             _contactInfo.Channel.ShutdownAsync(); // TODO: This may cause problems
             _contactInfo.Channel = CreateAuthenticatedChannel(_contactInfo.Credentials.Url, Authority.Api);
+            _contactInfo.EstopChannel = CreateAuthenticatedChannel(_contactInfo.Credentials.Url, Authority.Estop);
 
             return Result.Success;
         }
@@ -76,6 +77,8 @@ namespace Sharks.Spot
         {
             _contactInfo.Lease = RobotSystems.LeaseSystem.AquireLease(this);
             if (_contactInfo.Lease == null) return Result.Error;
+
+            Thread.Sleep(3000);
 
             return RobotSystems.PowerSystem.PowerOn(this);
         }
@@ -130,7 +133,7 @@ namespace Sharks.Spot
         /// <returns> The generated request header </returns>
         public static RequestHeader GetRequestHeader(string ClientName = "Pilot")
         {
-            Timestamp _time = new Timestamp() { Seconds = DateTime.UtcNow.Second };
+            Timestamp _time = new Timestamp() { Seconds = DateTime.UtcNow.Second, Nanos = DateTime.UtcNow.Second / 1000000000 };
             return new RequestHeader() { ClientName = ClientName, RequestTimestamp = _time };
         }
     }

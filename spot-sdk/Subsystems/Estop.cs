@@ -5,11 +5,11 @@ namespace Sharks.Spot.RobotSystems
 {
     public static class EstopSystem
     {
-        public static Result RegisterEstopClient(Robot Robot)
+        public static Result RegisterEstopClient(this Robot Robot)
         {
-            EstopService.EstopServiceClient _eStopServiceClient = new EstopService.EstopServiceClient(Robot.RobotContact.Channel);
+            EstopService.EstopServiceClient _eStopServiceClient = new (Robot.RobotContact.EstopChannel);
 
-            RegisterEstopEndpointRequest _registerEndpointRequest = new RegisterEstopEndpointRequest()
+            RegisterEstopEndpointRequest _registerEndpointRequest = new ()
             {
                 Header = Robot.GetRequestHeader(),
                 TargetEndpoint = new EstopEndpoint()
@@ -17,7 +17,6 @@ namespace Sharks.Spot.RobotSystems
                     CutPowerTimeout = new Duration() { Seconds = 60 },
                     Name = Estop.DefaultServiceName,
                     Role = Estop.Role,
-                    UniqueId = "0"
                 }
             };
 

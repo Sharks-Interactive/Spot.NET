@@ -4,7 +4,7 @@ namespace Sharks.Spot.RobotSystems
 {
     public static class PositionSystem
     {
-        public static Result Sit(Robot Robot)
+        public static Result Sit(this Robot Robot)
         {
             RobotCommandService.RobotCommandServiceClient _robotCommandService = new RobotCommandService.RobotCommandServiceClient(Robot.RobotContact.Channel);
 

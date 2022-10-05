@@ -18,6 +18,11 @@ namespace Sharks.Spot
         public Channel? Channel;
 
         /// <summary>
+        /// The channel used for the estop service
+        /// </summary>
+        public Channel? EstopChannel;
+
+        /// <summary>
         /// Headers to contact the robot with
         /// </summary>
         public Metadata Headers;
