@@ -77,12 +77,12 @@ namespace Sharks.Spot
         /// <returns> The result of the operation </returns>
         public async Task<Result> Initialise()
         {
+            if (await RobotSystems.TimeSystem.EstablishTimeSync(this) != Result.Success) return Result.Error;
+
             _contactInfo.Lease = RobotSystems.LeaseSystem.AquireLease(this);
             if (_contactInfo.Lease == null) return Result.Error;
 
-            await RobotSystems.TimeSystem.EstablishTimeSync(this);
-
-            return RobotSystems.PowerSystem.PowerOn(this);
+            return Result.Success;
         }
 
         /// <summary>

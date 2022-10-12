@@ -17,12 +17,14 @@ namespace Sharks.Spot.RobotSystems
                     CutPowerTimeout = new Duration() { Seconds = 60 },
                     Name = Estop.DefaultServiceName,
                     Role = Estop.Role,
+                    Timeout = new Duration() { Seconds = 60 },
                 }
             };
 
             RegisterEstopEndpointResponse _registerEndpointResponse = _eStopServiceClient.RegisterEstopEndpoint(_registerEndpointRequest);
 
-            return Util.ResultFromBool(_registerEndpointResponse.Header.Error.Code.ResultOk());
+            
+            return _registerEndpointResponse.Status == RegisterEstopEndpointResponse.Types.Status.Success && _registerEndpointResponse.Header.Error.Code.ResultOk() ? Result.Success : Result.Error;
         }
     }
 }

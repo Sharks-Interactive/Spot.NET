@@ -2,6 +2,7 @@ using Microsoft.Extensions.Configuration;
 using NUnit.Framework;
 using Sharks.Spot.RobotSystems;
 using System;
+using System.Threading.Tasks;
 
 namespace Sharks.Spot.Test
 {
@@ -36,9 +37,10 @@ namespace Sharks.Spot.Test
         }
 
         [Test]
-        public async void _020_Initialise()
+        public async Task _020_Initialise()
         {
-            Assert.That(await Robot?.Initialise(), Is.Not.EqualTo(null));
+            Result _res = await Robot?.Initialise();
+            Assert.That(_res, Is.EqualTo(Result.Success));
         }
 
         [Test]
@@ -50,9 +52,16 @@ namespace Sharks.Spot.Test
         }
 
         [Test]
-        public void _040_Sit()
+        public async Task _040_PowerOn()
         {
-            Assert.That(Robot?.Sit(), Is.EqualTo(Result.Success));
+            Result _res = await PowerSystem.PowerOn(Robot);
+            Assert.That(_res, Is.EqualTo(Result.Success));
+        }
+
+        [Test]
+        public void _050_Sit()
+        {
+            //Assert.That(Robot?.Sit(), Is.EqualTo(Result.Success));
         }
     }
 }
