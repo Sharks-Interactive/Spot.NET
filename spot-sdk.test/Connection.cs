@@ -36,9 +36,9 @@ namespace Sharks.Spot.Test
         }
 
         [Test]
-        public void _020_Initialise()
+        public async void _020_Initialise()
         {
-            Assert.That(Robot?.Initialise(), Is.Not.EqualTo(null));
+            Assert.That(await Robot?.Initialise(), Is.Not.EqualTo(null));
         }
 
         [Test]

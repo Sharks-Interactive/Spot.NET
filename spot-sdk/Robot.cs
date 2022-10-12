@@ -21,7 +21,9 @@ namespace Sharks.Spot
             {
                 if (_contactInfo.Lease != null) return _contactInfo.Lease;
                 return RobotSystems.LeaseSystem.AquireLease(this);
-            } }
+            } 
+            set => _contactInfo.Lease = value;
+        }
 
         /// <summary>
         /// How we should identify ourselves to spot
@@ -73,12 +75,12 @@ namespace Sharks.Spot
         /// Registers an Estop client and acquires a lease for the robot
         /// </summary>
         /// <returns> The result of the operation </returns>
-        public Result Initialise()
+        public async Task<Result> Initialise()
         {
             _contactInfo.Lease = RobotSystems.LeaseSystem.AquireLease(this);
             if (_contactInfo.Lease == null) return Result.Error;
 
-            Thread.Sleep(3000);
+            await RobotSystems.TimeSystem.EstablishTimeSync(this);
 
             return RobotSystems.PowerSystem.PowerOn(this);
         }
