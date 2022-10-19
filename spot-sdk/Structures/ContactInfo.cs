@@ -1,4 +1,5 @@
 ﻿using Grpc.Core;
+using Grpc.Net.Client;
 
 namespace Sharks.Spot
 {
@@ -15,12 +16,12 @@ namespace Sharks.Spot
         /// <summary>
         /// The channel used to communicate with the robot over
         /// </summary>
-        public Channel? Channel;
+        public GrpcChannel? Channel;
 
         /// <summary>
         /// The channel used for the estop service
         /// </summary>
-        public Channel? EstopChannel;
+        public GrpcChannel? EstopChannel;
 
         /// <summary>
         /// Headers to contact the robot with
