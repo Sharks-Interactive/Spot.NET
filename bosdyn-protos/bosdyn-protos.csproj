@@ -1,23 +1,20 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard1.5</TargetFramework>
+    <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Google.Protobuf" Version="3.21.1" />
-    <PackageReference Include="Grpc" Version="2.46.3" />
-    <PackageReference Include="Grpc.Core" Version="2.46.3" />
-    <PackageReference Include="Grpc.Core.Api" Version="2.46.3" />
-    <PackageReference Include="Grpc.Tools" Version="2.46.3" PrivateAssets="All" />
+	<PackageReference Include="Google.Protobuf" Version="3.18.0" />
+	<PackageReference Include="Grpc.Net.Client" Version="2.39.0" />
+    <PackageReference Include="Grpc.Tools" Version="2.50.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
   </ItemGroup>
 
   <ItemGroup>
-    <Protobuf Include="google/protobuf/any.proto" Link="any.proto" />
-    <Protobuf Include="google/protobuf/duration.proto" Link="duration.proto" />
-    <Protobuf Include="google/protobuf/field_mask.proto" Link="field_mask.proto" />
-    <Protobuf Include="google/protobuf/timestamp.proto" Link="timestamp.proto" />
-    <Protobuf Include="google/protobuf/wrappers.proto" Link="wrappers.proto" />
+	<Protobuf Include="bosdyn/api/alerts.proto" Link="alerts.proto" />
     <Protobuf Include="bosdyn/api/arm_command.proto" Link="arm_command.proto" />
     <Protobuf Include="bosdyn/api/arm_surface_contact.proto" Link="arm_surface_contact.proto" />
     <Protobuf Include="bosdyn/api/arm_surface_contact_service.proto" Link="arm_surface_contact_service.proto" />
@@ -25,8 +22,8 @@
     <Protobuf Include="bosdyn/api/auth_service.proto" Link="auth_service.proto" />
     <Protobuf Include="bosdyn/api/basic_command.proto" Link="basic_command.proto" />
     <Protobuf Include="bosdyn/api/bddf.proto" Link="bddf.proto" />
-    <Protobuf Include="bosdyn/api/docking.proto" Link="docking.proto" />
-    <Protobuf Include="bosdyn/api/docking_service.proto" Link="docking_service.proto" />
+    <Protobuf Include="bosdyn/api/docking/docking.proto" Link="docking.proto" />
+    <Protobuf Include="bosdyn/api/docking/docking_service.proto" Link="docking_service.proto" />
     <Protobuf Include="bosdyn/api/data_acquisition.proto" Link="data_acquisition.proto" />
     <Protobuf Include="bosdyn/api/data_acquisition_plugin_service.proto" Link="data_acquisition_plugin_service.proto" />
     <Protobuf Include="bosdyn/api/data_acquisition_service.proto" Link="data_acquisition_service.proto" />
