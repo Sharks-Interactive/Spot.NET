@@ -1,7 +1,6 @@
 ﻿using Bosdyn.Api;
 using Google.Protobuf.WellKnownTypes;
-using Grpc.Net.Client;
-using System.Text;
+using Grpc.Core;
 
 namespace Sharks.Spot
 {
@@ -92,28 +91,20 @@ namespace Sharks.Spot
         /// <param name="Address"></param>
         /// <param name="Authority"></param>
         /// <returns> The created channel </returns>
-        private GrpcChannel CreateAuthenticatedChannel(string Address, string Authority = Authority.Auth)
+        private Channel CreateAuthenticatedChannel(string Address, string Authority = Authority.Auth)
         {
             // Generate credentials
-            HttpClientHandler _handler = new HttpClientHandler();
-            _handler.ClientCertificates.Add(new System.Security.Cryptography.X509Certificates.X509Certificate(Encoding.ASCII.GetBytes(RootCert.Cert)));
-            _handler.Properties.Add("grpc.ssl_target_name_override", Authority);
-
-            Grpc.Core.CallCredentials _credentials = Grpc.Core.CallCredentials.FromInterceptor((context, metadata) =>
+            CallCredentials _credentials = CallCredentials.FromInterceptor((context, metadata) =>
             {
                 if (!string.IsNullOrEmpty(_userToken)) metadata.Add(MetadataHeaders.Auth, _fullUserToken);
                 return Task.CompletedTask;
             });
 
             // Generate channel options
-            //List<ChannelOption> _options = new () { new ChannelOption(ChannelOptions.SslTargetNameOverride, Authority) };
+            List<ChannelOption> _options = new () { new ChannelOption(ChannelOptions.SslTargetNameOverride, Authority) };
 
             // Create and return new channel
-            return GrpcChannel.ForAddress(Address, new GrpcChannelOptions
-            {
-                HttpHandler = _handler,
-                Credentials = Grpc.Core.ChannelCredentials.Create(Grpc.Core.ChannelCredentials.SecureSsl, _credentials),
-            });
+            return new Channel(Address, new SslCredentials(RootCert.Cert), _options);
         }
 
         /// <summary>

@@ -16,12 +16,12 @@ namespace Sharks.Spot
         /// <summary>
         /// The channel used to communicate with the robot over
         /// </summary>
-        public GrpcChannel? Channel;
+        public Channel? Channel;
 
         /// <summary>
         /// The channel used for the estop service
         /// </summary>
-        public GrpcChannel? EstopChannel;
+        public Channel? EstopChannel;
 
         /// <summary>
         /// Headers to contact the robot with
