@@ -9,8 +9,17 @@ namespace Sharks.Spot.RobotSystems
             PowerService.PowerServiceClient _powerService = new (Robot.RobotContact.Channel);
 
             // Send request
-            PowerCommandRequest _powerCommandRequest = new () { Request = PowerCommandRequest.Types.Request.OnMotors };
-            PowerCommandResponse _powerCommandResponse = await _powerService.PowerCommandAsync(_powerCommandRequest, Robot.RobotContact.Headers);
+            PowerCommandRequest _powerCommandRequest = new () { Request = PowerCommandRequest.Types.Request.OnMotors, Header = Robot.GetRequestHeader(), Lease = Robot.Lease };
+            PowerCommandResponse _powerCommandResponse;
+            try
+            {
+                _powerCommandResponse = await _powerService.PowerCommandAsync(_powerCommandRequest, Robot.RobotContact.Headers);
+            }
+            catch
+            {
+                _powerCommandResponse = _powerService.PowerCommand(_powerCommandRequest, Robot.RobotContact.Headers);
+                _powerCommandResponse = _powerService.PowerCommand(_powerCommandRequest, Robot.RobotContact.Headers);
+            }
 
             return _powerCommandResponse.LicenseStatus == LicenseInfo.Types.Status.Valid && 
                 _powerCommandResponse.Status == PowerCommandStatus.StatusSuccess &&

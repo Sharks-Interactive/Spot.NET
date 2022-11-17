@@ -15,6 +15,9 @@ namespace Sharks.Spot.Test
         public void Setup()
         {
             Configuration = new ConfigurationBuilder().AddUserSecrets<ConnectionTest>().Build();
+            Environment.SetEnvironmentVariable("GRPC_TRACE", "all");
+            Environment.SetEnvironmentVariable("GRPC_VERBOSITY", "DEBUG");
+            Environment.SetEnvironmentVariable("GRPC_POLL_STRATEGY", "poll,legacy,epoll");
 
             Robot = new Robot(
                 new ContactInfo() 
