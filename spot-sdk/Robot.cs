@@ -82,6 +82,8 @@ namespace Sharks.Spot
             _contactInfo.Lease = RobotSystems.LeaseSystem.AquireLease(this);
             if (_contactInfo.Lease == null) return Result.Error;
 
+            //await RobotSystems.Directory.ListDirectories(this);
+
             return Result.Success;
         }
 
@@ -91,7 +93,7 @@ namespace Sharks.Spot
         /// <param name="Address"></param>
         /// <param name="Authority"></param>
         /// <returns> The created channel </returns>
-        private Channel CreateAuthenticatedChannel(string Address, string Authority = Authority.Auth)
+        public Channel CreateAuthenticatedChannel(string Address, string Authority = Authority.Auth)
         {
             // Generate credentials
             CallCredentials _credentials = CallCredentials.FromInterceptor((context, metadata) =>

@@ -43,6 +43,7 @@ namespace Sharks.Spot.Test
         public async Task _020_Initialise()
         {
             Result _res = await Robot?.Initialise();
+            await Directory.ListDirectories(Robot);
             Assert.That(_res, Is.EqualTo(Result.Success));
         }
 
@@ -64,7 +65,7 @@ namespace Sharks.Spot.Test
         [Test]
         public void _050_Sit()
         {
-            //Assert.That(Robot?.Sit(), Is.EqualTo(Result.Success));
+            Assert.That(Robot?.Sit(), Is.EqualTo(Result.Success));
         }
     }
 }

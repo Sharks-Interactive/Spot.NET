@@ -5,6 +5,7 @@
         public const string Auth = "auth.spot.robot";
         public const string Api = "api.spot.robot";
         public const string Estop = "estop.spot.robot";
+        public const string Power = "power.spot.robot";
     }
 
     public static class MetadataHeaders
