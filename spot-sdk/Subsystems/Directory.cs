@@ -1,26 +1,27 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Bosdyn.Api;
+﻿using Bosdyn.Api;
 
 namespace Sharks.Spot.RobotSystems
 {
-    public static class Directory
+    public static class DirectorySystem
     {
-        public static async Task ListDirectories(Robot Robot)
+        private static List<ServiceEntry> _services = new ();
+
+        public static async Task<Result> ListDirectories(this Robot Robot)
         {
-            DirectoryService.DirectoryServiceClient _directoryService = new(Robot.RobotContact.Channel);
+            DirectoryService.DirectoryServiceClient _directoryService = new(Robot.EnsureChannelFor(Authority.Api));
 
-            ListServiceEntriesRequest _listServicesRequest = new ListServiceEntriesRequest() { Header = Robot.GetRequestHeader() };
-            ListServiceEntriesResponse _listServicesResponse = _directoryService.ListServiceEntries(_listServicesRequest, Robot.RobotContact.Headers);
+            ListServiceEntriesRequest _listServicesRequest = new() { Header = Robot.GetRequestHeader() };
+            ListServiceEntriesResponse _listServicesResponse = await _directoryService.ListServiceEntriesAsync(_listServicesRequest, Robot.RobotContact.Headers);
 
-            for (int i = 0; i < _listServicesResponse.ServiceEntries.Count; i++)
-            {
-                Console.WriteLine(_listServicesResponse.ServiceEntries[i].Authority);
-            }
+            if (_listServicesResponse.Header.Error.Code.ResultOk() || _listServicesResponse.ServiceEntries.Count < 1) return Result.Error;
+
+            for (int i = 0; i < _listServicesResponse.ServiceEntries.Count; i++) 
+                Console.WriteLine($"Ay: {_listServicesResponse.ServiceEntries[i].Authority} Nm: {_listServicesResponse.ServiceEntries[i].Name} Tp: {_listServicesResponse.ServiceEntries[i].Type}");
+            _services = _listServicesResponse.ServiceEntries.ToList();
+
+            return Result.Success;
         }
+
+        public static ServiceEntry? ServiceFromName(string Name) => _services.Find(s => s.Name == Name);
     }
 }

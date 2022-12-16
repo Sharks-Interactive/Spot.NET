@@ -14,16 +14,6 @@ namespace Sharks.Spot
         public RobotCredentials Credentials;
 
         /// <summary>
-        /// The channel used to communicate with the robot over
-        /// </summary>
-        public Channel? Channel;
-
-        /// <summary>
-        /// The channel used for the estop service
-        /// </summary>
-        public Channel? EstopChannel;
-
-        /// <summary>
         /// Headers to contact the robot with
         /// </summary>
         public Metadata Headers;

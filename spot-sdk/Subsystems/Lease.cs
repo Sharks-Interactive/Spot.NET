@@ -5,7 +5,7 @@ namespace Sharks.Spot.RobotSystems
 {
     public static class LeaseSystem
     {
-        public static async void ManageLeaseLifecycle(Robot Robot)
+        public static async void ManageLeaseLifecycle(this Robot Robot)
         {
             Robot.Lease = AquireLease(Robot);
 
@@ -18,11 +18,11 @@ namespace Sharks.Spot.RobotSystems
             }
         }
 
-        public static Lease AquireLease(Robot Robot)
+        public static Lease AquireLease(this Robot Robot)
         {
-            LeaseService.LeaseServiceClient _leaseService = new LeaseService.LeaseServiceClient(Robot.RobotContact.Channel);
+            LeaseService.LeaseServiceClient _leaseService = new (Robot.EnsureChannelFor(Authority.Api));
 
-            AcquireLeaseRequest _aquireLeaseRequest = new AcquireLeaseRequest() { Header = Robot.GetRequestHeader(), Resource = "body" };
+            AcquireLeaseRequest _aquireLeaseRequest = new () { Header = Robot.GetRequestHeader(), Resource = "body" };
             AcquireLeaseResponse _aquireLeaseResponse = _leaseService.AcquireLease(_aquireLeaseRequest, Robot.RobotContact.Headers);
 
             if (_aquireLeaseResponse.Header.Error.Code.ResultOk() && _aquireLeaseResponse.Status == AcquireLeaseResponse.Types.Status.Ok) // Redundant?
@@ -31,11 +31,11 @@ namespace Sharks.Spot.RobotSystems
             return null;
         }
 
-        public static Lease RetainLease(Robot Robot, Lease Lease)
+        public static Lease RetainLease(this Robot Robot, Lease Lease)
         {
-            LeaseService.LeaseServiceClient _leaseService = new LeaseService.LeaseServiceClient(Robot.RobotContact.Channel);
+            LeaseService.LeaseServiceClient _leaseService = new (Robot.EnsureChannelFor(Authority.Api));
 
-            RetainLeaseRequest _retainLeaseRequest = new RetainLeaseRequest() { Header = Robot.GetRequestHeader(), Lease = Lease };
+            RetainLeaseRequest _retainLeaseRequest = new () { Header = Robot.GetRequestHeader(), Lease = Lease };
             RetainLeaseResponse _retainLeaseResponse = _leaseService.RetainLease(_retainLeaseRequest, Robot.RobotContact.Headers);
 
             if (_retainLeaseResponse.Header.Error.Code.ResultOk() && _retainLeaseResponse.LeaseUseResult.Status == LeaseUseResult.Types.Status.Ok) // Redundant?

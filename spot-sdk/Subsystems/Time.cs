@@ -18,7 +18,7 @@ namespace Sharks.Spot.RobotSystems
             return Result.Error;
         }
 
-        public static async Task<Result> EstablishTimeSync(Robot Robot)
+        public static async Task<Result> EstablishTimeSync(this Robot Robot)
         {
             Result _result = Result.Error;
             while (_result != Result.Success)
@@ -27,11 +27,11 @@ namespace Sharks.Spot.RobotSystems
             return _result;
         }
 
-        public static async Task<Result> TimeSyncRoundTrip(Robot Robot)
+        public static async Task<Result> TimeSyncRoundTrip(this Robot Robot)
         {
-            TimeSyncService.TimeSyncServiceClient _timeService = new(Robot.RobotContact.Channel);
+            TimeSyncService.TimeSyncServiceClient _timeService = new(Robot.EnsureChannelFor(Authority.Api));
 
-            TimeSyncUpdateRequest _request = new TimeSyncUpdateRequest() { PreviousRoundTrip = LastTrip, ClockIdentifier = "fjkdlas", Header = Robot.GetRequestHeader() };
+            TimeSyncUpdateRequest _request = new () { PreviousRoundTrip = LastTrip, ClockIdentifier = "fjkdlas", Header = Robot.GetRequestHeader() };
             TimeSyncUpdateResponse _response = await _timeService.TimeSyncUpdateAsync(_request, Robot.RobotContact.Headers);
 
             LastTrip = new()

@@ -13,7 +13,7 @@
         public const string Auth = "authorization";
     }
 
-    public static class Estop
+    public static class ESTOP
     {
         public const string DefaultServiceName = "estop";
         public const string ServiceType = "bosdyn.api.EstopService";
